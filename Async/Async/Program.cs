@@ -20,8 +20,8 @@ namespace Async
 
             Task<int> first = function(new Job() { Name = "First", Delay = 5 });
             Task<int> second = function(new Job() { Name = "Second", Delay = 3 });
-            Console.WriteLine("First elsaped time: {0}", first.Result);
-            Console.WriteLine("Second elsaped time: {0}", second.Result);
+            Console.WriteLine("First elapsed time: {0}", first.Result);
+            Console.WriteLine("Second elapsed time: {0}", second.Result);
 
             Console.Read();
         }
