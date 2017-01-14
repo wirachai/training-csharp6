@@ -12,7 +12,7 @@ namespace ExtensionMethod.Sample
         {
             return source.Ticks >= beginRange.Ticks && source.Ticks <= endRange.Ticks;
         }
-        public static bool WorkingDay(this DateTime source)
+        public static bool IsWorkingDay(this DateTime source)
         {
             return source.DayOfWeek != DayOfWeek.Saturday && source.DayOfWeek != DayOfWeek.Sunday;
         }
