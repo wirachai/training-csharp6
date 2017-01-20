@@ -6,12 +6,11 @@ namespace CSharp6.Logger
     {
         public string GetLogMessage(DateTime timestamp, LogLevel level, string message, string stackTrace)
         {
-            var stackTraceMessage = stackTrace != null ? stackTrace : null;
-            if (stackTraceMessage == null)
+            if (stackTrace == null)
             {
                 return string.Format("{0:yyyy-MM-dd HH:mm:ss.ffff} - {1}: {2}", timestamp, level, message);
             }
-            return string.Format("{0:yyyy-MM-dd HH:mm:ss.ffff} - {1}: {2}\n{3}", timestamp, level, message, stackTraceMessage);
+            return string.Format("{0:yyyy-MM-dd HH:mm:ss.ffff} - {1}: {2}\n{3}", timestamp, level, message, stackTrace);
         }
 
         public void Write(LogLevel level, string message)
